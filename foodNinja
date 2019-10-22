@@ -1,0 +1,98 @@
+package foodninja;
+import java.util.Scanner;
+
+public class FOODNINJA {
+
+    
+    public static void main(String[] args) {
+        String staffName[], staffID[], salary[], branch[];
+        staffName = new String[10];
+        staffID = new String[10];
+        salary = new String[10];
+        branch = new String [10];
+        
+       Scanner scan = new Scanner (System.in);
+       
+       System.out.println ("**********STAFF INFORMATION**********");
+       
+       for (int i=0; i<10; i++){
+           
+           System.out.print("Enter Staff Name: ");
+           staffName[i] = scan.nextLine();
+           System.out.print("Enter Staff ID: ");
+           staffID[i] = scan.nextLine();
+           System.out.print("Enter Salary: ");
+           salary[i] = scan.nextLine();
+           System.out.print("Enter branch: ");
+           branch[i] = scan.nextLine();
+           
+       }
+       
+       System.out.println("**********VIEW INFORMATION**********");
+       printdeliveryInfo(staffName[0], staffID[0], salary[0], branch[0]);
+       printdeliveryInfo(staffName[1], staffID[1], salary[1], branch[1]);
+       printdeliveryInfo(staffName[2], staffID[2], salary[2], branch[2]);
+       printdeliveryInfo(staffName[3], staffID[3], salary[3], branch[3]);
+       printdeliveryInfo(staffName[4], staffID[4], salary[4], branch[4]);
+       printdeliveryInfo(staffName[5], staffID[5], salary[5], branch[5]);
+       printdeliveryInfo(staffName[6], staffID[6], salary[6], branch[6]);
+       printdeliveryInfo(staffName[7], staffID[7], salary[7], branch[7]);
+       printdeliveryInfo(staffName[8], staffID[8], salary[8], branch[8]);
+       printdeliveryInfo(staffName[9], staffID[9], salary[9], branch[9]);
+       
+      
+       
+    }
+
+   static void printdeliveryInfo (String n, String id, String s, String b){
+       System.out.println ("Staff Name: "+n);
+       System.out.println ("Staff ID: "+id);
+       System.out.println ("Staff Salary: "+s);
+       System.out.println ("Staff branch: "+b);
+   }
+}
+
+
+package foodninja;
+
+
+public class deliveryInfo {
+    
+    private String staffName, staffID;
+    String salary, branch;
+    
+    public deliveryInfo(String staffName, String staffID, String salary, String branch){
+        this.staffName = staffName;
+        this.staffID = staffID;
+        this.salary = salary;
+        this.branch = branch;
+    }
+    
+        String getstaffName(){
+            return this.staffName;
+        }
+        String getstaffID(){
+            return this.staffID;
+        }
+        String getsalary(){
+            return this.salary;
+        }
+        String getbranch(){
+            return this.branch;
+        }
+        
+        void setstaffName(){
+            this.staffName = staffName;
+}
+        void setstaffID(){
+            this.staffID = staffID;
+        }
+        void setsalary(){
+            this.salary = salary;
+        }
+        void setbranch(){
+            this.branch = branch;
+        }
+}
+    
+    
